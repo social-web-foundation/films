@@ -1,17 +1,17 @@
-const CACHE_PREFIX = "checkin-cache-";
+const CACHE_PREFIX = "films-cache-";
 const CACHE_VERSION = '0.1.5';
 const CACHE_NAME = `${CACHE_PREFIX}-${CACHE_VERSION}`;
 
 const APP_SHELL = [
   "/",
   "/index.html",
-  "/js/checkin-activity.js",
-  "/js/checkin-choose-place.js",
-  "/js/checkin-element.js",
-  "/js/checkin-home.js",
-  "/js/checkin-inbox.js",
-  "/js/checkin-login.js",
-  "/js/checkin-save.js",
+  "/js/films-activity.js",
+  "/js/films-choose-place.js",
+  "/js/films-element.js",
+  "/js/films-home.js",
+  "/js/films-inbox.js",
+  "/js/films-login.js",
+  "/js/films-save.js",
   "https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css",
   "https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace.js",
   "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap",

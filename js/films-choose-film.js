@@ -3,9 +3,9 @@ import {
   css,
   LitElement
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js'
-import { CheckinElement } from './checkin-element.js'
+import { FilmsElement } from './films-element.js'
 
-export class CheckinChooseFilmElement extends CheckinElement {
+export class FilmsChooseFilmElement extends FilmsElement {
   static styles = css`
     :host {
       display: block;
@@ -232,4 +232,4 @@ export class CheckinChooseFilmElement extends CheckinElement {
   }
 }
 
-customElements.define('checkin-choose-film', CheckinChooseFilmElement)
+customElements.define('films-choose-film', FilmsChooseFilmElement)

@@ -6,7 +6,7 @@ import {
 
 import * as oauth from 'https://cdn.jsdelivr.net/npm/oauth4webapi@3/+esm'
 
-export class CheckinLoginElement extends LitElement {
+export class FilmsLoginElement extends LitElement {
   WEBFINGER_REGEXP =
     /^(?:acct:)?(?<username>[^@]+)@(?<domain>(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)(?:\.(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?))*)$/
 
@@ -203,4 +203,4 @@ export class CheckinLoginElement extends LitElement {
   }
 }
 
-customElements.define('checkin-login', CheckinLoginElement)
+customElements.define('films-login', FilmsLoginElement)

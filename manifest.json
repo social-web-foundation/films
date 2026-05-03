@@ -1,6 +1,6 @@
 {
-  "name": "Checkin",
-  "short_name": "Checkin",
+  "name": "Films",
+  "short_name": "Films",
   "description": "ActivityPub Check-in",
   "start_url": "/",
   "scope": "/",

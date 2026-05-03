@@ -4,8 +4,8 @@ import {
   LitElement
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js'
 
-import { CheckinElement } from './checkin-element.js'
-import { CheckinActivityElement } from './checkin-activity.js'
+import { FilmsElement } from './films-element.js'
+import { FilmsActivityElement } from './films-activity.js'
 
 const ACTIVITY_TYPES = [
   'Activity',
@@ -91,7 +91,7 @@ function isActivity (object) {
   }
 }
 
-export class CheckinInboxElement extends CheckinElement {
+export class FilmsInboxElement extends FilmsElement {
   static styles = css`
     .spinner-container {
       display: flex;
@@ -139,11 +139,11 @@ export class CheckinInboxElement extends CheckinElement {
             ${this._activities && this._activities.length > 0
               ? this._activities.map(
                   (a) =>
-                    html`<checkin-activity
+                    html`<films-activity
                       redirect-uri=${this.redirectUri}
                       client-id=${this.clientId}
                       .activity=${a}>
-                    </checkin-activity>`
+                    </films-activity>`
                 )
               : html` <div><p>No activities.</p></div> `}
           </div>
@@ -218,4 +218,4 @@ export class CheckinInboxElement extends CheckinElement {
   }
 }
 
-customElements.define('checkin-inbox', CheckinInboxElement)
+customElements.define('films-inbox', FilmsInboxElement)

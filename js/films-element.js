@@ -7,7 +7,7 @@ import {
 
 import * as oauth from 'https://cdn.jsdelivr.net/npm/oauth4webapi@3/+esm'
 
-export class CheckinElement extends LitElement {
+export class FilmsElement extends LitElement {
   static get properties () {
     return {
       redirectUri: { type: String, attribute: 'redirect-uri' },

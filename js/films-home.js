@@ -4,11 +4,11 @@ import {
   LitElement
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js'
 
-import { CheckinElement } from './checkin-element.js'
-import { CheckinChooseFilmElement } from './checkin-choose-film.js'
-import { CheckinInboxElement } from './checkin-inbox.js'
+import { FilmsElement } from './films-element.js'
+import { FilmsChooseFilmElement } from './films-choose-film.js'
+import { FilmsInboxElement } from './films-inbox.js'
 
-export class CheckinHomeElement extends CheckinElement {
+export class FilmsHomeElement extends FilmsElement {
   static styles = css`
     :host {
       display: grid;
@@ -97,9 +97,9 @@ export class CheckinHomeElement extends CheckinElement {
 
     <main>
       ${(this._route === 'inbox')
-        ? html`<checkin-inbox redirect-uri=${this.redirectUri} client-id=${this.clientId} />`
+        ? html`<films-inbox redirect-uri=${this.redirectUri} client-id=${this.clientId} />`
         : (this._route === 'checkin')
-          ? html`<checkin-choose-film redirect-uri=${this.redirectUri}   client-id=${this.clientId} />`
+          ? html`<films-choose-film redirect-uri=${this.redirectUri}   client-id=${this.clientId} />`
           : html`<sl-alert>Unknown route</sl-alert>`
       }
     </main>
@@ -122,6 +122,6 @@ export class CheckinHomeElement extends CheckinElement {
 }
 
 customElements.define(
-  'checkin-home',
-  CheckinHomeElement
+  'films-home',
+  FilmsHomeElement
 )

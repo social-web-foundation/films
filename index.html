@@ -41,9 +41,9 @@
         padding: 1rem;
       }
     </style>
-    <script type="module" src="js/checkin-login.js"></script>
-    <script type="module" src="js/checkin-save.js"></script>
-    <script type="module" src="js/checkin-home.js"></script>
+    <script type="module" src="js/films-login.js"></script>
+    <script type="module" src="js/films-save.js"></script>
+    <script type="module" src="js/films-home.js"></script>
     <title>Films</title>
   </head>
   <body>
@@ -59,16 +59,16 @@
       document.addEventListener("DOMContentLoaded", () => {
         const params = new URLSearchParams(window.location.search);
         document.getElementById("page").innerHTML = params.get("state")
-          ? `<checkin-save
+          ? `<films-save
                 client-id=${client_id}
                 redirect-uri=${redirect_uri}
                 success-uri=${redirect_uri}
               />`
           : !localStorage.getItem("access_token")
-            ? `<checkin-login
+            ? `<films-login
                 client-id=${client_id}
                 redirect-uri=${redirect_uri} />`
-            : `<checkin-home
+            : `<films-home
                 client-id=${client_id}
                 redirect-uri=${redirect_uri} />`;
       });

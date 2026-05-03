@@ -4,9 +4,9 @@ import {
   unsafeHTML
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/all/lit-all.min.js'
 import DOMPurify from 'https://cdn.jsdelivr.net/npm/dompurify@3.2.3/+esm'
-import { CheckinElement } from './checkin-element.js'
+import { FilmsElement } from './films-element.js'
 
-export class CheckinActivityElement extends CheckinElement {
+export class FilmsActivityElement extends FilmsElement {
   static styles = css`
     :host {
       display: block;
@@ -153,4 +153,4 @@ export class CheckinActivityElement extends CheckinElement {
   }
 }
 
-customElements.define('checkin-activity', CheckinActivityElement)
+customElements.define('films-activity', FilmsActivityElement)
