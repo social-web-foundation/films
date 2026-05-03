@@ -63,7 +63,7 @@ export class FilmsChooseFilmElement extends FilmsElement {
 
   async getFilms (q) {
     const res = await fetch(
-      `https://movies.pub/search/movie?q=${q}&lng=en`,
+      `https://movies.pub/search/movie?q=${encodeURIComponent(q)}&lng=en`,
       {
         headers: {
           Accept:
@@ -143,6 +143,7 @@ export class FilmsChooseFilmElement extends FilmsElement {
             placeholder="Type to search"
             .value=${this._query}
             @sl-input=${this._onSearchInput}
+            @keydown=${(e) => e.stopPropagation()}
           ></sl-input>
           <sl-menu @sl-select=${this._onFilmSelect}>
             ${this._films.map(
