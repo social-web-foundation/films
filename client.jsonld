@@ -3,10 +3,10 @@
     "https://www.w3.org/ns/activitystreams",
     "https://purl.archive.org/socialweb/oauth"
   ],
-  "id": "https://checkin.swf.pub/client.jsonld",
-  "name": "Checkin Sample App",
-  "summary": "A sample client for geosocial activities over ActivityPub",
-  "redirectURI": "https://checkin.swf.pub/",
+  "id": "https://films.swf.pub/client.jsonld",
+  "name": "Films Sample App",
+  "summary": "A sample client for film viewing over ActivityPub",
+  "redirectURI": "https://films.swf.pub/",
   "attributedTo": {
     "id": "https://socialwebfoundation.org/author/evanprodromou/",
     "name": "Evan Prodromou"
