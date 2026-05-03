@@ -63,7 +63,7 @@ export class CheckinLoginElement extends LitElement {
       <h1>Checkin</h1>
       <p class="intro">
         Welcome! This is an <a href="https://activitypub.rocks/">ActivityPub</a>
-        geosocial Web application. To log in, you need to have an account on a
+        films Web application. To log in, you need to have an account on a
         compatible server.
       </p>
       <div class="login-form">
