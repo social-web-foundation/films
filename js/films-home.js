@@ -75,7 +75,7 @@ export class FilmsHomeElement extends FilmsElement {
 
       <span class="brand"><a href="#">Films</a></span>
 
-      <sl-button href="#checkin" variant="primary">
+      <sl-button href="#films" variant="primary">
         +
       </sl-button>
 
@@ -98,7 +98,7 @@ export class FilmsHomeElement extends FilmsElement {
     <main>
       ${(this._route === 'inbox')
         ? html`<films-inbox redirect-uri=${this.redirectUri} client-id=${this.clientId} />`
-        : (this._route === 'checkin')
+        : (this._route === 'films')
           ? html`<films-choose-film redirect-uri=${this.redirectUri}   client-id=${this.clientId} />`
           : html`<sl-alert>Unknown route</sl-alert>`
       }

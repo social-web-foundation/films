@@ -6,7 +6,7 @@ const APP_SHELL = [
   "/",
   "/index.html",
   "/js/films-activity.js",
-  "/js/films-choose-place.js",
+  "/js/films-choose-film.js",
   "/js/films-element.js",
   "/js/films-home.js",
   "/js/films-inbox.js",
