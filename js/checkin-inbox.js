@@ -178,15 +178,8 @@ export class CheckinInboxElement extends CheckinElement {
       if (latestId && activity.id === latestId) {
         break
       }
-      if (this.isGeo(activity)) {
-        const required = ['id', 'type', 'published', 'actor'].concat(
-          (activity.type == 'Arrive')
-            ? ['location']
-            : (activity.type == 'Leave')
-                ? ['object']
-                : (activity.type == 'Travel')
-                    ? ['target', 'origin']
-                    : [])
+      if (this.isFilmsActivity(activity)) {
+        const required = ['id', 'type', 'published', 'actor', 'object']
         activities.push(await this.toObject(activity, { required }))
         this._activities = [...activities, ...cached].slice(
           0,
@@ -215,8 +208,9 @@ export class CheckinInboxElement extends CheckinElement {
     this._isLoading = false
   }
 
-  isGeo (object) {
-    return ['Arrive', 'Leave', 'Travel'].includes(object.type)
+  isFilmsActivity (object) {
+    return object.type === 'View' &&
+      object.object?.type === 'Video'
   }
 }
 
