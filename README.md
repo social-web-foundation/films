@@ -1,2 +1,2 @@
 # checkin
-Example client for ActivityPub geosocial
+Example client for ActivityPub films
