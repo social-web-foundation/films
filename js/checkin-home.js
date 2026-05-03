@@ -5,7 +5,7 @@ import {
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js'
 
 import { CheckinElement } from './checkin-element.js'
-import { CheckinChoosePlaceElement } from './checkin-choose-place.js'
+import { CheckinChooseFilmElement } from './checkin-choose-film.js'
 import { CheckinInboxElement } from './checkin-inbox.js'
 
 export class CheckinHomeElement extends CheckinElement {
@@ -73,7 +73,7 @@ export class CheckinHomeElement extends CheckinElement {
 
     <header>
 
-      <span class="brand"><a href="#">Checkin</a></span>
+      <span class="brand"><a href="#">Films</a></span>
 
       <sl-button href="#checkin" variant="primary">
         +
@@ -99,13 +99,13 @@ export class CheckinHomeElement extends CheckinElement {
       ${(this._route === 'inbox')
         ? html`<checkin-inbox redirect-uri=${this.redirectUri} client-id=${this.clientId} />`
         : (this._route === 'checkin')
-          ? html`<checkin-choose-place redirect-uri=${this.redirectUri}   client-id=${this.clientId} />`
+          ? html`<checkin-choose-film redirect-uri=${this.redirectUri}   client-id=${this.clientId} />`
           : html`<sl-alert>Unknown route</sl-alert>`
       }
     </main>
 
     <footer>
-      <a href="https://github.com/social-web-foundation/checkin/">GitHub</a>
+      <a href="https://github.com/social-web-foundation/films/">GitHub</a>
     </footer>
     `
   }

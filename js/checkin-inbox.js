@@ -209,8 +209,12 @@ export class CheckinInboxElement extends CheckinElement {
   }
 
   isFilmsActivity (object) {
-    return object.type === 'View' &&
-      object.object?.type === 'Video'
+    const hasType = (value, target) => {
+      if (!value) return false
+      return Array.isArray(value) ? value.includes(target) : value === target
+    }
+    return hasType(object.type, 'View') &&
+      hasType(object.object?.type, 'Video')
   }
 }
 
