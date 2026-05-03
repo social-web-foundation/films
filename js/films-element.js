@@ -292,33 +292,22 @@ export class FilmsElement extends LitElement {
   }
 
   makeSummaryPart (object, def = '(something)') {
-    const name = object ? (object.name ? object.name : def) : def
+    const displayName = object?.name ?? object?.nameMap?.en ?? def
     const url = this.getUrl(object)
     return url
-      ? `<a href="${this.attrEscape(url)}">${this.contentEscape(name)}</a>`
-      : `${this.contentEscape(name)}`
+      ? `<a href="${this.attrEscape(url)}">${this.contentEscape(displayName)}</a>`
+      : `${this.contentEscape(displayName)}`
   }
 
   makeSummary (activity) {
     const actorPart = this.makeSummaryPart(activity.actor, '(someone)')
     switch (activity.type) {
-      case 'Arrive': {
-        const placePart = this.makeSummaryPart(
-          activity.location,
-          '(somewhere)'
+      case 'View': {
+        const filmPart = this.makeSummaryPart(
+          activity.object,
+          '(some film)'
         )
-        return `${actorPart} arrived at ${placePart}`
-        break
-      }
-      case 'Leave': {
-        const placePart = this.makeSummaryPart(activity.object, '(somewhere)')
-        return `${actorPart} left ${placePart}`
-        break
-      }
-      case 'Travel': {
-        const targetPart = this.makeSummaryPart(activity.target, '(somewhere)')
-        const originPart = this.makeSummaryPart(activity.origin, '(somewhere)')
-        return `${actorPart} travelled from ${originPart} to ${targetPart}`
+        return `${actorPart} watched ${filmPart}`
         break
       }
       default: {
