@@ -60,7 +60,7 @@ export class CheckinLoginElement extends LitElement {
 
   render () {
     return html`
-      <h1>Checkin</h1>
+      <h1>Films</h1>
       <p class="intro">
         Welcome! This is an <a href="https://activitypub.rocks/">ActivityPub</a>
         films Web application. To log in, you need to have an account on a
