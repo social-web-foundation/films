@@ -171,7 +171,6 @@ export class FilmsInboxElement extends FilmsElement {
     const activities = []
 
     for await (const activity of this.items(inbox)) {
-      console.dir({ id: activity.id, type: activity.type, published: activity.published })
       if (!isActivity(activity)) {
         continue
       }
